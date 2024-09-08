@@ -13,12 +13,14 @@ function pesquisar(){
   campoPesquisa = campoPesquisa.toLowerCase();
   let titulo = "";
   let descricao = "";
+  let tag = "";
 
     for(let estado of estados){
       titulo = estado.titulo.toLowerCase();
       descricao = estado.descricao.toLowerCase();
+      tag = estado.tags.toLowerCase();
 
-      if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || estado.link.includes(campoPesquisa)){
+      if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || estado.link.includes(campoPesquisa) || tag.includes(campoPesquisa)){
         resultado += `
             <div class="item-resultado">
                 <h2><a href="#" target="blank">${estado.titulo}</a></h2>
